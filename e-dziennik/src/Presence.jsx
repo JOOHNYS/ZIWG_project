@@ -1,5 +1,6 @@
 import { useState, } from 'react'
 import './App.css'
+import Button from './components/Button'
 import Header from './Layouts/Header'
 import Sidebar_teacher from './Layouts/Sidebar_teacher'
 import Select from 'react-select'
@@ -14,6 +15,10 @@ function Presence() {
     { value: 'vanilla', label: 'Vanilla' }
   ]
 // TABLE ---- TODO ---- jakos ogarnac ilosc wierszy i kolumn tyle ile jest uczniow/ dni itd
+  const handleButtonClick = () => {
+    setShowForm(true);
+  };
+
   return (
     <div className='grid-container'>
     <Header />
@@ -46,6 +51,8 @@ function Presence() {
       </tr>
     </tbody>
       </table>
+    <Button onClickFunction={handleButtonClick} buttonText="Dodaj ocenę" addArrow="true" />
+      <img src="https://static.vecteezy.com/vite/assets/photo-masthead-375-b8ae1548.webp" />
     </main>
     </div>
   )

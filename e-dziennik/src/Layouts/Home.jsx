@@ -43,7 +43,7 @@ function Home() {
             <div className='cards-inner'>
                 <h3>ILOŚĆ OBECNOŚCI</h3>
             </div>
-            <h1>17</h1>
+            <h1>15</h1>
             </div>
             <div className='card'>
             <div className='cards-inner'>

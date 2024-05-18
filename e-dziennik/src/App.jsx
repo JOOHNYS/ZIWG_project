@@ -22,7 +22,6 @@ function App() {
         <Route path='/plan' element={<Plan />} />
       </Routes>
     </Router>
-      
   )
 };
 
