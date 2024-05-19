@@ -1,6 +1,6 @@
 import React,{useState} from 'react' 
 import { useNavigate } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import Sidebar_clear from './Layouts/Sidebar_clear';
 import './App.css'
 
@@ -21,8 +21,8 @@ function Login(){
 
 	if (loggedIn) {
 		// Redirect to dashboard if logged in
-		return <Redirect to="/dashboard" />;
-	  }
+		return <Navigate to="/dashboard" />;
+	}
 
 	return(
 <div className='grid-container'>
