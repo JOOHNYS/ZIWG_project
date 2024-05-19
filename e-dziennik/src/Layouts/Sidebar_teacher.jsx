@@ -12,26 +12,26 @@ function Sidebar_teacher() {
             <span className='icon close_icon'>X</span>
         </div>
         <ul className='sidebar-list'>
+            <Link to='../dashboard'>
             <li className='sidebar-list-item'>
-                <a href=''>
-                    <BsHouse className='icon'/> Kokpit
-                </a>
+                    <BsHouse className='icon'/> Kokpit   
             </li>
-            <li className='sidebar-list-item'>
-                <a href=''>
+            </Link>
+            <Link to="../grades">
+                <li className='sidebar-list-item'>
                     <BsMortarboard className='icon'/> Oceny
-                </a>
-            </li>
+                </li>
+            </Link>
+            <Link to="../presence">
             <li className='sidebar-list-item'>
-                <a href=''>
                     <BsPeople className='icon'/> Obecność
-                </a>
             </li>
+            </Link>
+            <Link to="../plan">
             <li className='sidebar-list-item'>
-                <a href=''>
                     <BsCalendar3 className='icon'/> Plan lekcji
-                </a>
             </li>
+            </Link>
         </ul>
         <Link to='/'>
             <div className='sidebar-list-item sidebar-logout'>
