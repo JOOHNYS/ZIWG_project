@@ -1,6 +1,6 @@
 import React from 'react'
 import {BsHouse, BsMortarboard, BsPeople, BsCalendar3, BsBoxArrowLeft } from 'react-icons/bs'
-import Login from '../Login'
+import { Link } from 'react-router-dom';
 
 function Sidebar_teacher() {
   return (
@@ -33,11 +33,11 @@ function Sidebar_teacher() {
                 </a>
             </li>
         </ul>
-        <div className='sidebar-list-item sidebar-logout'>
-        <a href='../Login'>
-            <BsBoxArrowLeft className='icon' /> Wyloguj
-        </a>
-        </div>
+        <Link to='/'>
+            <div className='sidebar-list-item sidebar-logout'>
+                <BsBoxArrowLeft className='icon'/> Wyloguj
+            </div>
+        </Link>
     </aside>
   )
 }

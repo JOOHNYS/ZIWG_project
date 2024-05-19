@@ -8,7 +8,5 @@ import Dashboard from './Dashboard.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <Login />
-    <Dashboard />
   </React.StrictMode>,
 )

@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 import Sidebar_clear from './Layouts/Sidebar_clear';
 import './App.css'
+import { render } from 'react-dom';
+import Dashboard from './Dashboard';
 
 function Login(){ 
 	const [email,setEmail]=useState(""); 
