@@ -1,5 +1,6 @@
 import React from 'react'
 import {BsHouse, BsMortarboard, BsPeople, BsCalendar3, BsBoxArrowLeft } from 'react-icons/bs'
+import Login from '../Login'
 
 function Sidebar_teacher() {
   return (
@@ -33,8 +34,8 @@ function Sidebar_teacher() {
             </li>
         </ul>
         <div className='sidebar-list-item sidebar-logout'>
-        <a href=''>
-            <BsBoxArrowLeft className='icon'/> Wyloguj
+        <a href='../Login'>
+            <BsBoxArrowLeft className='icon' /> Wyloguj
         </a>
         </div>
     </aside>
