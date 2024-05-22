@@ -152,6 +152,7 @@ button{
   border-radius: 6px;
   width: 75px;
   height: 30px;
+  cursor: pointer;
   }
 
 button:hover{
@@ -248,4 +249,58 @@ th, td {
 }
 th {
   background-color: #e5e5e5;
+}
+
+.table-main{
+  margin-top: 7vh;
+}
+
+/* Select */
+.dropdown{
+  min-width: 15vh;
+  width: 25%;
+  color: #524e4e;
+}
+
+/* Headers in main */
+.main-header{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: auto;
+}
+.header-main-right{
+  display: flex;
+  width: 5vh;
+  float: right;
+  margin-right: 25px;
+}
+
+
+/* Arrow Button */
+.arrow-button{
+  background: none;
+  border: none;
+  width: 4vh;
+  height: 4vh;
+  margin: auto;
+  cursor: pointer;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.arrow-icon{
+  width: 3.5vh;
+  height: 3.5vh;
+  cursor: pointer;
+  vertical-align: middle;
+  color: #524e4e;
+  cursor: pointer;
+}
+
+/* Button to add grades or edit */
+.button-main{
+  min-width: 7vh;
+  width: 10%;
+  font-size: 14px;
+  height: 37px;
 }
