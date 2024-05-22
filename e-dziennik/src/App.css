@@ -250,6 +250,11 @@ th, td {
 th {
   background-color: #e5e5e5;
 }
+th:first-child, td:first-child{
+  min-width: 20px;
+  width: 15%;
+}
+
 
 .table-main{
   margin-top: 7vh;
