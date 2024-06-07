@@ -10,16 +10,47 @@ function Login() {
     const [password, setPassword] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
 
-    const handleLogin = (e) => {
-        e.preventDefault();
-        // Your login logic here
-        setLoggedIn(true);
+    const [statusCode, setStatusCode] = useState(null);
+	const [loading, setLoading] = useState(true);
+	const [data, setData] = useState(null);
+	const [dataInput, setDataInput]=useState("");
+	const [loginAttempt, setLoginAttempt] = useState(false);
+
+	const [status, setStatus] = useState(null);
+  	const [error, setError] = useState(null);
+
+    const fetchData = async () => {
+        setLoading(true);
+        try {
+            const response = await fetch(`https://localhost:32770/api/Users/PasswordValidation/${email}/${password}`);
+
+            setStatusCode(response.status);
+            const responseText = await response.text();
+
+            if (response.ok && responseText == "true") {
+                setLoggedIn(true);
+            } else {
+                alert("Błędne dane logowania");
+            }
+
+		} catch (error) {
+		    console.error("Error during fetch:", error);
+		    setLoggedIn(false);
+		} finally {
+		    setLoading(false);
+		}
     };
 
-    if (loggedIn) {
-        // Redirect to dashboard if logged in
-        return <Navigate to="/dashboard" />;
-    }
+    const handleLogin = (e) => {
+		e.preventDefault();
+		setLoginAttempt(true);
+		fetchData();
+    };
+
+	if (loggedIn) {
+		// Redirect to dashboard if logged in
+		return <Navigate to="/dashboard" />;
+	}
 
     return (
         <div className='grid-container'>
@@ -36,7 +67,7 @@ function Login() {
                         <label htmlFor="passw">Hasło</label><br/>
                         <input type="password" name="passw" id="passw" value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
-                    <Button onClickFunction={handleLogin} buttonText="Zaloguj" addArrow="true" />
+                    <Button onClickFunction={handleLogin} buttonText="Zaloguj" addArrow />
                 </div>
                 <img className="children" src="/children.svg" alt="Children" />
             </div>
