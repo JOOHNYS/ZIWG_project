@@ -36,9 +36,6 @@ function Grades() {
     <main className='main-container'>
       <div className='main-header'>
         <Select className='dropdown' options={options} />
-        <button className='button-main'>
-          Dodaj ocenę
-        </button>
       </div>
       <table className='table-main'>
       <thead>

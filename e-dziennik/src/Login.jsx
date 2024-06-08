@@ -23,7 +23,7 @@ function Login() {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const response = await fetch(`https://localhost:32770/api/Users/PasswordValidation/${email}/${password}`);
+            const response = await fetch(`https://localhost:32768/api/Users/PasswordValidation/${email}/${password}`);
 
             setStatusCode(response.status);
             const responseText = await response.text();
@@ -36,6 +36,7 @@ function Login() {
             }
 
 		} catch (error) {
+            alert("Brak połączenia z backendem");
 		    console.error("Error during fetch:", error);
 		    setLoggedIn(false);
 		} finally {

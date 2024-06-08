@@ -26,9 +26,6 @@ function Presence() {
     <main className='main-container'>
       <div className='main-header'>
         <Select className='dropdown' options={options} />
-        <button className='button-main'>
-          Dodaj obecność
-        </button>
       </div>
       <table className='table-main'>
       <thead>
