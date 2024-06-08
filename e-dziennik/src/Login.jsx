@@ -4,6 +4,7 @@ import Sidebar_clear from './Layouts/Sidebar_clear';
 import './App.css';
 import Button from './components/Button';
 import Dashboard from './Dashboard';
+import Cookies from 'js-cookie';
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -28,6 +29,7 @@ function Login() {
             const responseText = await response.text();
 
             if (response.ok && responseText == "true") {
+                Cookies.set('user', `${email}`, { expires: 1 });
                 setLoggedIn(true);
             } else {
                 alert("Błędne dane logowania");
