@@ -34,8 +34,9 @@ function Grades() {
     <Header />
     <Sidebar_teacher />
     <main className='main-container'>
-      <div className='main-header'>
+      <div className='main-header-tables'>
         <Select className='dropdown' options={options} />
+        <Button onClickFunction={handleButtonClick} buttonText="Dodaj ocenę" addArrow="true" />
       </div>
       <table className='table-main'>
       <thead>
@@ -56,7 +57,6 @@ function Grades() {
       </tr>
     </tbody>
       </table>
-    <Button onClickFunction={handleButtonClick} buttonText="Dodaj ocenę" addArrow="true" />
     {showForm && (
         <div className="modal">
           <div className="modal-content">

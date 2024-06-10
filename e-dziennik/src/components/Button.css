@@ -1,7 +1,8 @@
 button {
-  --primary-color: #4e658d;
-  --secondary-color: #fff;
-  --hover-color: #111;
+  --primary-color: #2e4265;
+  --secondary-color: #e5e5e5;
+  --hover-color: #1d3152;
+  --active-color: #172741;
   --arrow-width: 10px;
   --arrow-stroke: 2px;
   box-sizing: border-box;
@@ -51,6 +52,10 @@ button .arrow::before {
 button:hover {
   background-color: var(--hover-color);
 }
+button:active {
+  background-color: var(--active-color);
+}
+
 
 button:hover .arrow {
   background: var(--secondary-color);
