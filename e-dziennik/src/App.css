@@ -29,9 +29,19 @@ body {
   box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
 }
 .main-header-tables{
+  width: 90%;
   display: inline-flex;
   justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 5px;
   }
+  .main-header-right{
+    width: 90%;
+    display: inline-flex;
+    justify-content: right;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    }
 
 /* Icons */
 .icon {
@@ -379,4 +389,10 @@ input{
   align-content: center;
   color: #000;
   align-items: center;
+}
+
+.dropdown{
+  max-width: 200px;
+  min-width: 90px;
+  width: 15%;
 }

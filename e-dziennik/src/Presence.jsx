@@ -24,7 +24,7 @@ function Presence() {
     <Header />
     <Sidebar_teacher />
     <main className='main-container'>
-      <div className='main-header'>
+      <div className='main-header-tables'>
         <Select className='dropdown' options={options} />
         <Button onClickFunction={handleButtonClick} buttonText="Dodaj ocenę" addArrow="true" />
       </div>
