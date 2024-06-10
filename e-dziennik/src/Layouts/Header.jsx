@@ -28,7 +28,7 @@ function Header() {
 
     return (
     <header className='header'>
-        <p>Zalogowano jako [...]</p>
+        <p>Zalogowano</p>
     </header>
     )
 }

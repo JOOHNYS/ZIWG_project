@@ -95,7 +95,7 @@ body {
 .sidebar-list-item:hover {
   cursor: pointer;
   border-radius: 12px;
-
+  background-color: #172741af;
 }
 
 .sidebar-list-item:active {
