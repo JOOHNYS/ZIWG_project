@@ -2,35 +2,18 @@ import React from 'react'
 import {BsHouse, BsMortarboard, BsPeople, BsCalendar3, BsBoxArrowLeft } from 'react-icons/bs'
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 
+
 function Home() {
 
-    const data = [
-        { name: '5', value: 10 },
-        { name: '4', value: 30 },
-        { name: '3', value: 30 },
-        { name: '2', value: 20 },
-        { name: '1', value: 2 },
-      ];
-      
-      const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#ff2934'];
-      
-      const RADIAN = Math.PI / 180;
-      const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
-        const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-        const x = cx + radius * Math.cos(-midAngle * RADIAN);
-        const y = cy + radius * Math.sin(-midAngle * RADIAN);
-      
-        return (
-          <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-            {`${(percent * 100).toFixed(0)}%`}
-          </text>
-        );
-      };
+    
 
   return (
     <main className='main-container'>
         <div className='main-title'>
-            <h3>KOKPIT</h3>
+            <h2>Witamy</h2>
+        </div>
+        <div className='under-title'>
+        <h4>elektroniczny dziennik do Twoich usług</h4>
         </div>
         <div className='main-cards'>
         <div className='card'>
@@ -54,22 +37,63 @@ function Home() {
         </div>
 
 
-        <table className='2day_schedule'>
+        <table className='hrs_schedule'>
     <thead>
       <tr>
-        <th>Hours</th>
-        <th>Events</th>
+        <th className='hrs_schedule_class'>Lekcja</th>
+        <th className='hrs_schedule_time'>Godzina rozpoczęcia</th>
+        <th className='hrs_schedule_time'>Godzina zakończenia</th>
+        <th className='hrs_schedule_time'>Czas przerwy</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>8:00 - 8:45</td>
-        <td>Event 1
-        </td>
+        <td>1</td>
+        <td>8:00</td>
+        <td>8:45</td>
+        <td>10 minut</td>
       </tr>
       <tr>
-      <td>8:55 - 9:40</td>
-        <td>Event 2</td>
+      <td>2</td>
+        <td>8:55</td>
+        <td>9:40</td>
+        <td>10 minut</td>
+      </tr>
+      <tr>
+      <td>3</td>
+        <td>9:50</td>
+        <td>10:35</td>
+        <td>10 minut</td>
+      </tr>
+      <tr>
+      <td>4</td>
+        <td>10:45</td>
+        <td>11:30</td>
+        <td>10 minut</td>
+      </tr>
+      <tr>
+      <td>5</td>
+        <td>11:40</td>
+        <td>12:25</td>
+        <td>20 minut</td>
+      </tr>
+      <tr>
+      <td>6</td>
+        <td>12:45</td>
+        <td>13:30</td>
+        <td>10 minut</td>
+      </tr>
+      <tr>
+      <td>7</td>
+        <td>13:40</td>
+        <td>14:25</td>
+        <td>5 minut</td>
+      </tr>
+      <tr>
+      <td>8</td>
+        <td>14:30</td>
+        <td>15:15</td>
+        <td>5 minut</td>
       </tr>
     </tbody>
   </table>   
