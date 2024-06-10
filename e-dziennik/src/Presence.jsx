@@ -26,6 +26,7 @@ function Presence() {
     <main className='main-container'>
       <div className='main-header'>
         <Select className='dropdown' options={options} />
+        <Button onClickFunction={handleButtonClick} buttonText="Dodaj ocenę" addArrow="true" />
       </div>
       <table className='table-main'>
       <thead>
@@ -48,7 +49,7 @@ function Presence() {
       </tr>
     </tbody>
       </table>
-    <Button onClickFunction={handleButtonClick} buttonText="Dodaj ocenę" addArrow="true" />
+    
     </main>
     </div>
   )
