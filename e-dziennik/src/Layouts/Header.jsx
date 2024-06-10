@@ -3,32 +3,34 @@ import {BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch, BsJustify}
 import Cookies from 'js-cookie';
 
 function Header() {
+    const apiUrl = import.meta.env.VITE_API_URL;
 
     const fetchData = async () => {
-        setLoading(true);
         try {
+            const response = await fetch(`${apiUrl}/Users/UserData/${Cookies.get('user')}`);
 
-            const response = await fetch(`https://localhost:32768/api/Users/UserData/${Cookies.get('user')}`);
-
-            setStatusCode(response.status);
-            const responseText = await response.text();
+            const responseJson = await response.json();
 
             if (response.ok) {
-                // TODO PARSOWANIE ODPOWIEDZI
+                console.log(responseJson);
+                console.log(responseJson.accountType);
+                console.log(responseJson.name);
+
+                Cookies.set('accountType', `${responseJson.accountType}`, { expires: 1 });
             }
 
-		} catch (error) {
+        } catch (error) {
             alert("Brak połączenia z backendem");
-		    console.error("Error during fetch:", error);
-		    setLoggedIn(false);
-		} finally {
-		    setLoading(false);
-		}
-    };
+            console.error("Error during fetch:", error);
+        } finally {
+        }
+    }
+
+    fetchData();
 
     return (
     <header className='header'>
-        <p>Zalogowano</p>
+        <p>Zalogowano jako {Cookies.get('accountType')}</p>
     </header>
     )
 }

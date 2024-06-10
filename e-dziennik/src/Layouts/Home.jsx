@@ -1,7 +1,7 @@
 import React from 'react'
 import {BsHouse, BsMortarboard, BsPeople, BsCalendar3, BsBoxArrowLeft } from 'react-icons/bs'
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
-
+import Cookies from 'js-cookie';
 
 function Home() {
 
@@ -10,7 +10,7 @@ function Home() {
   return (
     <main className='main-container'>
         <div className='main-title'>
-            <h2>Witamy</h2>
+            <h2>Witamy {Cookies.get('user')}</h2>
         </div>
         <div className='under-title'>
         <h4>elektroniczny dziennik do Twoich usług</h4>

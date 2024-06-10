@@ -7,7 +7,9 @@ import Dashboard from './Dashboard';
 import Cookies from 'js-cookie';
 
 function Login() {
-    const [email, setEmail] = useState("");
+    const apiUrl = import.meta.env.VITE_API_URL;
+
+    const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
 
@@ -23,13 +25,13 @@ function Login() {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const response = await fetch(`https://localhost:32768/api/Users/PasswordValidation/${email}/${password}`);
+            const response = await fetch(`${apiUrl}/Users/PasswordValidation/${login}/${password}`);
 
             setStatusCode(response.status);
             const responseText = await response.text();
 
             if (response.ok && responseText == "true") {
-                Cookies.set('user', `${email}`, { expires: 1 });
+                Cookies.set('user', `${login}`, { expires: 1 });
                 setLoggedIn(true);
             } else {
                 alert("Błędne dane logowania");
@@ -63,8 +65,8 @@ function Login() {
                     <h1 className='login-title'>Zaloguj się</h1>
                     <h2 className="info-title">Proszę wpisać adres e-mail oraz hasło</h2>
                     <div className='login-input'>
-                        <label htmlFor="email">Email</label><br/>
-                        <input type="email" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <label htmlFor="login">Login</label><br/>
+                        <input type="login" name="login" id="login" value={login} onChange={(e) => setLogin(e.target.value)} />
                     </div>
                     <div className='login-input'>
                         <label htmlFor="passw">Hasło</label><br/>
