@@ -49,7 +49,6 @@ function Presence() {
     </tbody>
       </table>
     <Button onClickFunction={handleButtonClick} buttonText="Dodaj ocenę" addArrow="true" />
-      <img src="https://static.vecteezy.com/vite/assets/photo-masthead-375-b8ae1548.webp" />
     </main>
     </div>
   )
