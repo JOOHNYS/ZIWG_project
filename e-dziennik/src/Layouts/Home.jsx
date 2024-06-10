@@ -1,13 +1,15 @@
-import React from 'react'
+import { useState, React } from 'react'
 import {BsHouse, BsMortarboard, BsPeople, BsCalendar3, BsBoxArrowLeft } from 'react-icons/bs'
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 import Cookies from 'js-cookie';
 
 function Home() {
 
-    
+    const [classStudentsNumber, setclassStudentsNumber] = useState(30);
+    const [presentStudentsNumber, setpresentStudentsNumber] = useState(24);
+    let absentStudentsNumber = classStudentsNumber - presentStudentsNumber;
 
-  return (
+    return (
     <main className='main-container'>
         <div className='main-title'>
             <h2>Witamy {Cookies.get('user')}</h2>
@@ -18,21 +20,21 @@ function Home() {
         <div className='main-cards'>
         <div className='card'>
             <div className='cards-inner'>
-                <h3>LICZBA UCZNIÓW</h3>
+                <h3>LICZBA UCZNIÓW W KLASIE</h3>
             </div>
-            <h1>17</h1>
-            </div>
-            <div className='card'>
-            <div className='cards-inner'>
-                <h3>ILOŚĆ OBECNOŚCI</h3>
-            </div>
-            <h1>15</h1>
+            <h1>{classStudentsNumber}</h1>
             </div>
             <div className='card'>
             <div className='cards-inner'>
-                <h3>ILOŚĆ NIEOBECNOŚCI</h3>
+                <h3>ILOŚĆ NIEOBECNYCH UCZNIÓW</h3>
             </div>
-            <h1>2</h1>
+            <h1>{absentStudentsNumber}</h1>
+            </div>
+            <div className='card'>
+            <div className='cards-inner'>
+                <h3>ILOŚĆ OBECNYCH UCZNIÓW</h3>
+            </div>
+            <h1>{presentStudentsNumber}</h1>
             </div>
         </div>
 
