@@ -12,7 +12,7 @@ function Plan() {
     <Header />
     <Sidebar_teacher />
     <main className='main-container'>
-    <div className='header-main-right'>
+    <div className='main-header-right'>
         <button className='arrow-button'>
         <BsCaretLeftFill className='arrow-icon' />
       </button>
