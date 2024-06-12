@@ -246,6 +246,7 @@ button{
   min-width: 3px;
   width: 4%;
   background-color: #ccc ;
+
 }
 .hrs_schedule_time{
   max-width: 10px;
@@ -266,9 +267,7 @@ table {
   width: 95%;
   margin-top: 25px;
 }
-td{
-  height: 30px;
-}
+
 th, td {
   border: 1px solid #888888;
   padding: 8px;
