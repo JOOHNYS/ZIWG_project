@@ -252,24 +252,40 @@ button{
   width: 10px;
   background-color: #ccc ;
 }
+.table_name, .table_days{
+  min-width: 200px;
+}
+
 table, th, td {
   border: 1px solid #363636;
+  
+  
 }
 table {
   border-collapse: collapse;
   width: 95%;
-
+  margin-top: 25px;
+}
+td{
+  height: 30px;
 }
 th, td {
   border: 1px solid #888888;
   padding: 8px;
   text-align: left;
+  text-align: center;
 }
 thead, td:first-of-type{
   background-color: #ccc ;
 }
 td:first-of-type{
   width: 7%;
+}
+.bad-grade-1, .table_abcense{
+  background-color: #db2424ce;
+}
+.bad-grade-2{
+  background-color: #ffa135e8;
 }
 
 .modal {

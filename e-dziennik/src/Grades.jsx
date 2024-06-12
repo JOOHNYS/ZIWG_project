@@ -12,9 +12,10 @@ function Grades() {
 
   // TODO      ----     Data from data base ---- classes which teacher has
   const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' }
+    { value: '1a', label: '1a' },
+    { value: '1b', label: '1b' },
+    { value: '2a', label: '2a' },
+    { value: '2b', label: '2b' }
   ]
 
 // TABLE ---- TODO ---- jakos ogarnac ilosc wierszy i kolumn tyle ile jest uczniow/ ocen itd
@@ -41,20 +42,179 @@ function Grades() {
       <table className='table-main'>
       <thead>
       <tr>
-        <th>Hours</th>
-        <th>Events</th>
+        <th className='table_name'>Nazwisko i Imię</th>
+        <th>Spr 1</th>
+        <th>Kart 1</th>
+        <th>Dom 1</th>
+        <th>Kart 2</th>
+        <th>Dom 2</th>
+        <th>Spr 2</th>
+        <th>Kart 3</th>
+        <th>Kart 4</th>
+        <th>Dom 3</th>
+        <th>Spr 3</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>8:00 - 8:45</td>
-        <td>Event 1
-        </td>
+    <tr>
+      <td>Babucha Maria</td>
+        <td className='bad-grade-2'>2</td>
+        <td>4</td>
+        <td>5</td>
+        <td>3</td>
+        <td>5</td>
+        <td>4</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>6</td>
       </tr>
       <tr>
-      <td>8:55 - 9:40</td>
-        <td>Event 2</td>
+      <td>Ferajna Ferdynard</td>
+        <td className='bad-grade-1'>1</td>
+        <td>4</td>
+        <td className='bad-grade-1'>1</td>
+        <td className='bad-grade-2'>2</td>
+        <td className='bad-grade-2'>2</td>
+        <td>4</td>
+        <td className='bad-grade-1'>1</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
       </tr>
+      <tr>
+      <td>Gadzińska Aleksandra</td>
+        <td>6</td>
+        <td>5</td>
+        <td>5</td>
+        <td>4</td>
+        <td>5</td>
+        <td>4</td>
+        <td>5</td>
+        <td>5</td>
+        <td>4</td>
+        <td>6</td>
+      </tr>
+      <tr>
+      <td>Gdera Weronika</td>
+        <td>5</td>
+        <td>4</td>
+        <td>5</td>
+        <td>4</td>
+        <td>5</td>
+        <td>4</td>
+        <td>4</td>
+        <td>3</td>
+        <td>4</td>
+        <td>6</td>
+      </tr>
+      <tr>
+      <td>Hanaka Paweł</td>
+        <td>6</td>
+        <td>6</td>
+        <td>4</td>
+        <td>6</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>6</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+      <td>Kożuchowska Tatiana</td>
+        <td>4</td>
+        <td>4</td>
+        <td>5</td>
+        <td>3</td>
+        <td>5</td>
+        <td>4</td>
+        <td>4</td>
+        <td>4</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+      <td>Makówka Marcin</td>
+        <td>4</td>
+        <td>4</td>
+        <td>4</td>
+        <td>3</td>
+        <td>4</td>
+        <td>4</td>
+        <td>4</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+
+      <tr>
+        <td>Seidel Jan</td>
+        <td>6</td>
+        <td>5</td>
+        <td>4</td>
+        <td>5</td>
+        <td>4</td>
+        <td>5</td>
+        <td>4</td>
+        <td>5</td>
+        <td>4</td>
+        <td>6</td>
+      </tr>
+      
+      <tr>
+      <td>Skibińska Maja</td>
+        <td>5</td>
+        <td>4</td>
+        <td>5</td>
+        <td>4</td>
+        <td>5</td>
+        <td>5</td>
+        <td>6</td>
+        <td>5</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+      <td>Terpiłowska Maja</td>
+        <td>6</td>
+        <td>5</td>
+        <td>5</td>
+        <td>6</td>
+        <td>5</td>
+        <td>4</td>
+        <td>4</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+      </tr>
+      <tr>
+      <td>Tudejowicz Magdalena</td>
+        <td className='bad-grade-1'>1</td>
+        <td>3</td>
+        <td>5</td>
+        <td>4</td>
+        <td>5</td>
+        <td className='bad-grade-2'>2</td>
+        <td>4</td>
+        <td>3</td>
+        <td>4</td>
+        <td>6</td>
+      </tr>
+      <tr>
+      <td>Zawada Mariusz</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      
     </tbody>
       </table>
     {showForm && (

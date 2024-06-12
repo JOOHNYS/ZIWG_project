@@ -20,17 +20,17 @@ function Home() {
             <div className='cards-inner'>
                 <h3>LICZBA UCZNIÓW</h3>
             </div>
-            <h1>17</h1>
+            <h1>12</h1>
             </div>
             <div className='card'>
             <div className='cards-inner'>
-                <h3>ILOŚĆ OBECNOŚCI</h3>
+                <h3>OBECNI DZISIAJ</h3>
             </div>
-            <h1>15</h1>
+            <h1>10</h1>
             </div>
             <div className='card'>
             <div className='cards-inner'>
-                <h3>ILOŚĆ NIEOBECNOŚCI</h3>
+                <h3>NIEOBECNI DZISIAJ</h3>
             </div>
             <h1>2</h1>
             </div>

@@ -23,30 +23,78 @@ function Plan() {
       <table className='table-main'>
       <thead>
       <tr>
-        <th>Hours</th>
-        <th>Poniedziałek</th>
-        <th>Wtorek</th>
-        <th>Środa</th>
-        <th>Czwartek</th>
-        <th>Piątek</th>
+        <th className='hrs_schedule_class'>Godzina lekcyjna</th>
+        <th className='table_days'>Poniedziałek</th>
+        <th className='table_days'>Wtorek</th>
+        <th className='table_days'>Środa</th>
+        <th className='table_days'>Czwartek</th>
+        <th className='table_days'>Piątek</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>8:00 - 8:45</td>
-        <td>Event 1</td>
-        <td>Event 1</td>
-        <td>Event 1</td>
-        <td>Event 1</td>
-        <td>Event 1</td>
+        <td>1</td>
+        <td>Język angielski 2b</td>
+        <td></td>
+        <td></td>
+        <td>Język angielski 1a</td>
+        <td>Język angielski dodatkowy</td>
       </tr>
       <tr>
-      <td>8:55 - 9:40</td>
-        <td>Event 2</td>
-        <td>Event 2</td>
-        <td>Event 2</td>
-        <td>Event 2</td>
-        <td>Event 2</td>
+      <td>2</td>
+        <td>Język angielski 2a</td>
+        <td></td>
+        <td>Język angielski 1a</td>
+        <td>Język angielski 1b</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Język angielski 1a</td>
+        <td></td>
+        <td>Język angielski 1b</td>
+        <td>Język angielski 2a</td>
+        <td>Język angielski 1b</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Język angielski 1b</td>
+        <td>Język angielski 1a</td>
+        <td></td>
+        <td></td>
+        <td>Język angielski 2a</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td></td>
+        <td>Język angielski 2a</td>
+        <td>Język angielski 2b</td>
+        <td>Język angielski 2b</td>
+        <td>Język angielski 1a</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td>Język angielski 1b</td>
+        <td>Język angielski 2a</td>
+        <td></td>
+        <td>Język angielski 2b</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td></td>
+        <td>Język angielski 2b</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td>Język angielski dodatkowy</td>
+        <td></td>
+        <td></td>
       </tr>
     </tbody>
       </table>
